@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.ConsoleApp", "PSKDotNetCore.ConsoleApp\PSKDotNetCore.ConsoleApp.csproj", "{C42D01C3-A87E-4304-A517-05ED89AF250C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.ConsoleApp", "PSKDotNetCore.ConsoleApp\PSKDotNetCore.ConsoleApp.csproj", "{C42D01C3-A87E-4304-A517-05ED89AF250C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{CC0BED59-1777-4BED-AFA9-4169D9E91CB2}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
