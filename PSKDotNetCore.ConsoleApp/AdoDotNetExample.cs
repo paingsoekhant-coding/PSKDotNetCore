@@ -68,13 +68,41 @@ namespace PSKDotNetCore.ConsoleApp
             cmd.Parameters.AddWithValue("@BlogAuthor", author);
             cmd.Parameters.AddWithValue("@BlogContent", content);
 
-            //return number of role 
+            //return number of affected role 
             int result = cmd.ExecuteNonQuery();
             Console.WriteLine(result);
             connection.Close();
 
             //check create data success or not.
             string message = result > 0 ? "Create Successful." : "Create Failed.";
+            Console.WriteLine(message);
+        }
+
+        //update method 
+        public void Update(int id,string title, string author, string content) 
+        { 
+            SqlConnection connection =new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
+
+            connection.Open();
+            //sql query 
+            string query = @"UPDATE [dbo].[Tbl_Blog]
+   SET [BlogTitle] = @BlogTitle
+      ,[BlogAuthor] = @BlogAuthor
+      ,[BlogContent] = @BlogContent
+ WHERE [BlogId] = @BlogId";
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogId",id);
+            cmd.Parameters.AddWithValue("@BlogTitle", title);
+            cmd.Parameters.AddWithValue("@BlogAuthor", author);
+            cmd.Parameters.AddWithValue("@BlogContent", content);
+
+            //return number of affected rows
+            int result = cmd.ExecuteNonQuery();
+            Console.WriteLine(result);
+            connection.Close();
+
+            //check update success or not.
+            string message = result > 0 ? "Update Successful." : "Update Failed.";
             Console.WriteLine(message);
         }
 
