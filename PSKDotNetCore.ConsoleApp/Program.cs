@@ -7,15 +7,15 @@ Console.WriteLine("Hello, World!");
 
 AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
-//adoDotNetExample.Create("AdoDotNet","Ko Sann Lynn Htun","C# AdoDotNet Course" );
+//adoDotNetExample.Create("NewAdoDotNet","Ko Sann Lynn Htun","New C# AdoDotNet Course" );
 
 //adoDotNetExample.Read();
 
-//adoDotNetExample.Update(17,"AdoDotNet Update" , " Update Author" , " Update Content");
+//adoDotNetExample.Update(27,"AdoDotNet Update" , " Update Author" , " Update Content");
 
-//adoDotNetExample.Edit(12);
+//adoDotNetExample.Edit(25);
 
-adoDotNetExample.Delete(31);
+adoDotNetExample.Delete(32);
 
 
 Console.ReadKey();

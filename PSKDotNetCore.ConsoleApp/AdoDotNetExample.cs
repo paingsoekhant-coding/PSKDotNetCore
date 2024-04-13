@@ -29,7 +29,7 @@ namespace PSKDotNetCore.ConsoleApp
             connection.Open();
             Console.WriteLine("Connection open.");
 
-            string query = "select * from tbl_blog";
+            string query = "select BlogId, BlogTitle, BlogAuthor, BlogContent from tbl_blog";
             SqlCommand cmd = new SqlCommand(query, connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -118,14 +118,18 @@ namespace PSKDotNetCore.ConsoleApp
             connection.Open();
             Console.WriteLine("Connection Opened.");
 
-            string query = @"select * from Tbl_BLog where BlogId = @BlogId";
+            string query = @"select BlogId, BlogTitle, BlogAuthor, BlogContent from tbl_blog where BlogId = @BlogId";
             SqlCommand cmd = new SqlCommand(query , connection);
             cmd.Parameters.AddWithValue("@BlogId" , id);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sqlDataAdapter.Fill(dt);
+            //return number of affected rows
+            int result = cmd.ExecuteNonQuery();
+            Console.WriteLine(result);
 
             connection.Close();
+           
             Console.WriteLine("Connection Closed.");
             //check data empty or not 
             if (dt.Rows.Count == 0 )
