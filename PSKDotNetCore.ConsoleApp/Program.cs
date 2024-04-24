@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 
 Console.WriteLine("Hello, World!");
 
+//AdoDotNet 
+
 AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
 //adoDotNetExample.Create("NewAdoDotNet","Ko Sann Lynn Htun","New C# AdoDotNet Course" );
@@ -15,7 +17,13 @@ AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
 //adoDotNetExample.Edit(25);
 
-adoDotNetExample.Delete(32);
+//adoDotNetExample.Delete(32);
+
+//Dapper 
+
+DapperExample dapperExample = new DapperExample();
+
+dapperExample.Run();
 
 
 Console.ReadKey();
