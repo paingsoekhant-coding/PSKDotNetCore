@@ -14,7 +14,8 @@ namespace PSKDotNetCore.ConsoleApp
             DataSource = "DESKTOP-5V2KGHB", //server name 
             InitialCatalog = "DotNetTrainingBatch4", //database name
             UserID = "sa",
-            Password = "sasa@1234"
+            Password = "sasa@1234",
+            TrustServerCertificate = true
         };
     }
 }
