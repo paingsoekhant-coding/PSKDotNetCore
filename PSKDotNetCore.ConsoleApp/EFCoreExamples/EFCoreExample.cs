@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PSKDotNetCore.ConsoleApp.Dtos;
 
-namespace PSKDotNetCore.ConsoleApp
+namespace PSKDotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {
@@ -21,7 +22,7 @@ namespace PSKDotNetCore.ConsoleApp
 
         //EFCore read method
         private void Read()
-        {         
+        {
             var lst = db.Blogs.ToList();
             foreach (BlogDto blog in lst)
             {
@@ -38,7 +39,7 @@ namespace PSKDotNetCore.ConsoleApp
         private void Edit(int id)
         {
             var item = db.Blogs.FirstOrDefault(x => x.BlogId == id);
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("No data found.");
                 return;

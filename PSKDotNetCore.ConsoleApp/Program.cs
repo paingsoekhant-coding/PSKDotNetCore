@@ -1,5 +1,4 @@
-﻿
-using PSKDotNetCore.ConsoleApp;
+﻿using PSKDotNetCore.ConsoleApp.EFCoreExamples;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -7,7 +6,7 @@ Console.WriteLine("Hello, World!");
 
 //AdoDotNet 
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
 //adoDotNetExample.Create("NewAdoDotNet","Ko Sann Lynn Htun","New C# AdoDotNet Course" );
 
@@ -25,6 +24,8 @@ AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
 //dapperExample.Run();
 
+
+//EFCore 
 EFCoreExample eFCoreExample = new EFCoreExample();
 eFCoreExample.Run();
 

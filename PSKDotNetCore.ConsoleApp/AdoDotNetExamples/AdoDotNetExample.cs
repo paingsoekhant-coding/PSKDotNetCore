@@ -7,7 +7,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSKDotNetCore.ConsoleApp
+namespace PSKDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     internal class AdoDotNetExample
     {
@@ -81,9 +81,9 @@ namespace PSKDotNetCore.ConsoleApp
         }
 
         //update method 
-        public void Update(int id,string title, string author, string content) 
-        { 
-            SqlConnection connection =new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
+        public void Update(int id, string title, string author, string content)
+        {
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
 
             connection.Open();
             Console.WriteLine("Connection Opened.");
@@ -94,7 +94,7 @@ namespace PSKDotNetCore.ConsoleApp
       ,[BlogContent] = @BlogContent
  WHERE [BlogId] = @BlogId";
             SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@BlogId",id);
+            cmd.Parameters.AddWithValue("@BlogId", id);
             cmd.Parameters.AddWithValue("@BlogTitle", title);
             cmd.Parameters.AddWithValue("@BlogAuthor", author);
             cmd.Parameters.AddWithValue("@BlogContent", content);
@@ -119,8 +119,8 @@ namespace PSKDotNetCore.ConsoleApp
             Console.WriteLine("Connection Opened.");
 
             string query = @"select BlogId, BlogTitle, BlogAuthor, BlogContent from tbl_blog where BlogId = @BlogId";
-            SqlCommand cmd = new SqlCommand(query , connection);
-            cmd.Parameters.AddWithValue("@BlogId" , id);
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogId", id);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sqlDataAdapter.Fill(dt);
@@ -129,10 +129,10 @@ namespace PSKDotNetCore.ConsoleApp
             Console.WriteLine(result);
 
             connection.Close();
-           
+
             Console.WriteLine("Connection Closed.");
             //check data empty or not 
-            if (dt.Rows.Count == 0 )
+            if (dt.Rows.Count == 0)
             {
                 Console.WriteLine("No data found");
                 return;
@@ -151,14 +151,14 @@ namespace PSKDotNetCore.ConsoleApp
         //delete method 
         public void Delete(int id)
         {
-            SqlConnection connection = new SqlConnection (_sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
 
             connection.Open();
             Console.WriteLine("Connection Opened.");
             //sql query 
             string query = @"DELETE FROM [dbo].[Tbl_Blog]
       WHERE BlogId = @BlogId";
-            SqlCommand cmd = new SqlCommand(query , connection);
+            SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
             int result = cmd.ExecuteNonQuery();
             Console.WriteLine(result);
@@ -167,10 +167,9 @@ namespace PSKDotNetCore.ConsoleApp
             Console.WriteLine("Connection Closed.");
             //check delete success or fail.
             string message = result > 0 ? "Delete Successful." : "Delete Failed.";
-            Console.WriteLine(message); 
+            Console.WriteLine(message);
         }
 
 
     }
 }
- 
