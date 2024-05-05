@@ -52,7 +52,7 @@ namespace PSKDotNetCore.RestApi.Controllers
             string message = result > 0 ? "Create Successful." : "Create Failed.";
             return Ok(message);
         }
-
+        //update with put method
         [HttpPut("{id}")]
         public IActionResult Update(int id ,BlogModel blog)
         {
@@ -74,6 +74,7 @@ namespace PSKDotNetCore.RestApi.Controllers
             return Ok(message);
         }
 
+        //update method with patch
         [HttpPatch("{id}")]
         public IActionResult PatchBlog(int id, BlogModel blog)
         {
@@ -116,7 +117,7 @@ namespace PSKDotNetCore.RestApi.Controllers
 
             return Ok(message);
         }
-
+        //delete method
         [HttpDelete]
         public IActionResult Delete(int id )
         {
