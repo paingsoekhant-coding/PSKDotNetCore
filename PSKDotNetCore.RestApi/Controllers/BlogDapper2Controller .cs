@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PSKDotNetCore.RestApi.Models;
+using PSKDotNetCore.Shared;
 using System.Data;
 using System.Data.SqlClient;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
@@ -10,16 +11,21 @@ namespace PSKDotNetCore.RestApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogDapperController : ControllerBase
+    public class BlogDapper2Controller : ControllerBase
     {
+        private readonly DapperService _dapperService = new DapperService(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+
         //dapper get method
-        [HttpGet]
+        [HttpGet]   
         public IActionResult ReadBLog()
         {
             string query = "select BlogId, BlogTitle, BlogAuthor, BlogContent from tbl_blog";
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            List<BlogModel> lst = db.Query<BlogModel>(query).ToList();
-            return Ok(lst);
+            //using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            //List<BlogModel> lst = db.Query<BlogModel>(query).ToList();
+
+            //from dapper service
+            var lst2 = _dapperService.Query<BlogModel>(query);
+            return Ok(lst2);
         }
 
         //dapper edit method
@@ -47,8 +53,11 @@ namespace PSKDotNetCore.RestApi.Controllers
            (@BlogTitle
            ,@BlogAuthor
            ,@BlogContent)";
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            int result = db.Execute(query, blog);
+            //using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            //int result = db.Execute(query, blog);
+
+            //from dapper service 
+            int result = _dapperService.Execute(query, blog);
             string message = result > 0 ? "Create Successful." : "Create Failed.";
             return Ok(message);
         }
@@ -67,8 +76,11 @@ namespace PSKDotNetCore.RestApi.Controllers
       ,[BlogAuthor] = @BlogAuthor
       ,[BlogContent] = @BlogContent
  WHERE [BlogId] = @BlogId";
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            int result = db.Execute(query, blog);
+            //using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            //int result = db.Execute(query, blog);
+
+            //from dapper service 
+            int result = _dapperService.Execute(query, blog);
             string message = result > 0 ? "Update Successful." : "Update Failed.";
            
             return Ok(message);
@@ -110,8 +122,11 @@ namespace PSKDotNetCore.RestApi.Controllers
    SET {conditions}
  WHERE [BlogId] = @BlogId";
 
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            int result = db.Execute(query, blog);
+            //using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            //int result = db.Execute(query, blog);
+
+            //from dapper service 
+            int result = _dapperService.Execute(query, blog);
 
             string message = result > 0 ? "Update Successful." : "Update Failed.";
 
@@ -128,8 +143,11 @@ namespace PSKDotNetCore.RestApi.Controllers
             }
             string query = @"DELETE FROM [dbo].[Tbl_Blog]
       WHERE BlogId = @BlogId";
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            int result = db.Execute(query, new BlogModel { BlogId = id});
+            //using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            //int result = db.Execute(query, new BlogModel { BlogId = id});
+
+            //from dapper service 
+            int result = _dapperService.Execute(query, new BlogModel { BlogId = id });
             string message = result > 0 ? "Delete Successful." : "Delete Failed.";
            
             return Ok(message);
@@ -137,9 +155,13 @@ namespace PSKDotNetCore.RestApi.Controllers
 
         private BlogModel? FindId(int id)
         {
+
             string query = "select BlogId, BlogTitle, BlogAuthor, BlogContent from tbl_blog where BlogId = @BlogId";
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            var item = db.Query<BlogModel>(query, new BlogModel { BlogId = id }).FirstOrDefault();
+            //using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            //var item = db.Query<BlogModel>(query, new BlogModel { BlogId = id }).FirstOrDefault();
+
+            //from dapper service
+            var item = _dapperService.QueryFirstOrDefault<BlogModel>(query, new BlogModel { BlogId = id });
             return item;
         }
     }
