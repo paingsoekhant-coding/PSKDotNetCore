@@ -164,17 +164,17 @@ namespace PSKDotNetCore.RestApi.Controllers
    
             if (!string.IsNullOrEmpty(blog.BlogTitle))
             {
-                conditions += "[BlogTitle] = @BlogTitle, ";
+                conditions += " [BlogTitle] = @BlogTitle, ";
 
             }
             if (!string.IsNullOrEmpty(blog.BlogAuthor))
             {
-                conditions += "[BlogAuthor] = @BlogAuthor, ";
+                conditions += " [BlogAuthor] = @BlogAuthor, ";
 
             }
             if (!string.IsNullOrEmpty(blog.BlogContent))
             {
-                conditions += "[BlogContent] = @BlogContent, ";
+                conditions += " [BlogContent] = @BlogContent, ";
 
             }
             if ( conditions.Length == 0)
