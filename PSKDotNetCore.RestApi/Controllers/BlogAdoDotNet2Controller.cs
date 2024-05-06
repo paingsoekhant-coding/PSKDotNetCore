@@ -32,10 +32,11 @@ namespace PSKDotNetCore.RestApi.Controllers
         [HttpGet("{id}")]
         public IActionResult EditBlog(int id) 
         {
-            string query = @"select BlogId, BlogTitle, BlogAuthor, BlogContent from tbl_blog where BlogId = @BlogId";
+            //string query = @"select BlogId, BlogTitle, BlogAuthor, BlogContent from tbl_blog where BlogId = @BlogId";
 
             //from adoDotNetService 
-            var lst = _adoDotNetService.QueryFirstOrDefault<BlogModel>(query,new AdoDotNetParameter("@BlogId", id));
+            //var lst = _adoDotNetService.QueryFirstOrDefault<BlogModel>(query,new AdoDotNetParameter("@BlogId", id));
+            var lst = FindId(id);
 
             if (lst is null)
             {
@@ -154,8 +155,8 @@ namespace PSKDotNetCore.RestApi.Controllers
         {
 
             string query = "select BlogId, BlogTitle, BlogAuthor, BlogContent from tbl_blog where BlogId = @BlogId";
-            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            var item = db.Query<BlogModel>(query, new BlogModel { BlogId = id }).FirstOrDefault();
+            //using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            var item = _adoDotNetService.QueryFirstOrDefault<BlogModel>(query, new AdoDotNetParameter("@BlogId", id));
             return item;
         }
 
