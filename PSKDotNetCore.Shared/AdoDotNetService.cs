@@ -71,7 +71,12 @@ namespace PSKDotNetCore.Shared
             string json = JsonConvert.SerializeObject(dt); // change C# to json
             List<T> list = JsonConvert.DeserializeObject<List<T>>(json)!; //cahange json to C#
 
-            return list[0];
+          if (list.Count == 0)
+           {
+               return default;
+           }
+
+                return list[0];
         }
 
         public int Execute(string query, params AdoDotNetParameter[]? parameters)
