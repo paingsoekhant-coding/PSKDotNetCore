@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.RestApi", "PSKDotNetCore.RestApi\PSKDotNetCore.RestApi.csproj", "{5E298819-2F0A-467A-B19F-6A7D33EAE597}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.Shared", "PSKDotNetCore.Shared\PSKDotNetCore.Shared.csproj", "{3D302C17-9B70-4C01-B502-40573DE264DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.Shared", "PSKDotNetCore.Shared\PSKDotNetCore.Shared.csproj", "{3D302C17-9B70-4C01-B502-40573DE264DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.RestApiWithNLayer", "PSKDotNetCore.RestApiWithNLayer\PSKDotNetCore.RestApiWithNLayer.csproj", "{E1FC1916-C51E-4022-82F8-E28A29DD053C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3D302C17-9B70-4C01-B502-40573DE264DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D302C17-9B70-4C01-B502-40573DE264DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D302C17-9B70-4C01-B502-40573DE264DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1FC1916-C51E-4022-82F8-E28A29DD053C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1FC1916-C51E-4022-82F8-E28A29DD053C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1FC1916-C51E-4022-82F8-E28A29DD053C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1FC1916-C51E-4022-82F8-E28A29DD053C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
