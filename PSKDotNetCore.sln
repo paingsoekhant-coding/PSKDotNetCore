@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.RestApi", "PS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.Shared", "PSKDotNetCore.Shared\PSKDotNetCore.Shared.csproj", "{3D302C17-9B70-4C01-B502-40573DE264DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.RestApiWithNLayer", "PSKDotNetCore.RestApiWithNLayer\PSKDotNetCore.RestApiWithNLayer.csproj", "{E1FC1916-C51E-4022-82F8-E28A29DD053C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.RestApiWithNLayer", "PSKDotNetCore.RestApiWithNLayer\PSKDotNetCore.RestApiWithNLayer.csproj", "{E1FC1916-C51E-4022-82F8-E28A29DD053C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.ConsoleAppHttpClient", "PSKDotNetCore.ConsoleAppHttpClient\PSKDotNetCore.ConsoleAppHttpClient.csproj", "{0FCFDF9D-D8C6-40E7-BE79-EA78A1199EE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E1FC1916-C51E-4022-82F8-E28A29DD053C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1FC1916-C51E-4022-82F8-E28A29DD053C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1FC1916-C51E-4022-82F8-E28A29DD053C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FCFDF9D-D8C6-40E7-BE79-EA78A1199EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FCFDF9D-D8C6-40E7-BE79-EA78A1199EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FCFDF9D-D8C6-40E7-BE79-EA78A1199EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FCFDF9D-D8C6-40E7-BE79-EA78A1199EE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
