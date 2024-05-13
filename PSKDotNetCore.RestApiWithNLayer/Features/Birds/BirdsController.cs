@@ -6,37 +6,35 @@ namespace PSKDotNetCore.RestApiWithNLayer.Features.Birds
     [ApiController]
     public class BirdsController : ControllerBase
     {
-        private readonly Birds _data;
+        //private readonly BirdsModel _data;
 
-        private async Task<Birds> GetDataAsync()
+        private async Task<BirdsModel> GetDataAsync()
         {
             string jsonStr = await System.IO.File.ReadAllTextAsync("Birds.json");
-            var model = JsonConvert.DeserializeObject<Birds>(jsonStr);
+            var model = JsonConvert.DeserializeObject<BirdsModel>(jsonStr);
             return model;
 
         }
 
-        [HttpGet("birds")]
+        [HttpGet]
         public async Task<IActionResult> Birds()
         {
             var model = await GetDataAsync();
             return Ok(model.Tbl_Bird);
         }
 
-    }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Description(int id)
+        {
+            int newNum = id;
+            newNum--;
+            var model = await GetDataAsync();
+            if(id > 20)
+            {
+                return NotFound("No Birds Found");
+            }
+            return Ok(model.Tbl_Bird[newNum]);
+        }
 
-    public class Birds
-    {
-        public Tbl_Bird[] Tbl_Bird { get; set; }
     }
-
-    public class Tbl_Bird
-    {
-        public int Id { get; set; }
-        public string BirdMyanmarName { get; set; }
-        public string BirdEnglishName { get; set; }
-        public string Description { get; set; }
-        public string ImagePath { get; set; }
-    }
-
 }
