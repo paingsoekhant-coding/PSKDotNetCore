@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.ConsoleAppRes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.PizzaApi", "PSKDotNetCore.PizzaApi\PSKDotNetCore.PizzaApi.csproj", "{CF340AFD-D31F-403C-884C-2605336BD5F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.WinFormsApp", "PSKDotNetCore.WinFormsApp\PSKDotNetCore.WinFormsApp.csproj", "{8457B829-560C-47F9-961E-B91046D27440}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.WinFormsApp", "PSKDotNetCore.WinFormsApp\PSKDotNetCore.WinFormsApp.csproj", "{8457B829-560C-47F9-961E-B91046D27440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.ConsoleAppRefit", "PSKDotNetCore.ConsoleAppRefit\PSKDotNetCore.ConsoleAppRefit.csproj", "{3275999A-4FBA-4020-90E1-D956EEC4B765}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{8457B829-560C-47F9-961E-B91046D27440}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8457B829-560C-47F9-961E-B91046D27440}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8457B829-560C-47F9-961E-B91046D27440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3275999A-4FBA-4020-90E1-D956EEC4B765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3275999A-4FBA-4020-90E1-D956EEC4B765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3275999A-4FBA-4020-90E1-D956EEC4B765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3275999A-4FBA-4020-90E1-D956EEC4B765}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
