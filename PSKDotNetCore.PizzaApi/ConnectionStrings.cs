@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PSKDotNetCore.RestApiWithNLayer
+namespace PSKDotNetCore.PizzaApi
 {
     internal static class ConnectionStrings
     {
