@@ -89,22 +89,26 @@
             // 
             // btnCancel
             // 
+            btnCancel.BackColor = SystemColors.Highlight;
+            btnCancel.ForeColor = SystemColors.Control;
             btnCancel.Location = new Point(150, 259);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(94, 29);
             btnCancel.TabIndex = 6;
             btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
+            btnSave.BackColor = Color.FromArgb(0, 192, 0);
+            btnSave.ForeColor = SystemColors.Control;
             btnSave.Location = new Point(250, 259);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(94, 29);
             btnSave.TabIndex = 7;
             btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // FrmBlog
