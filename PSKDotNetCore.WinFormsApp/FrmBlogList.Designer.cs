@@ -69,6 +69,8 @@
             colEdit.MinimumWidth = 6;
             colEdit.Name = "colEdit";
             colEdit.ReadOnly = true;
+            colEdit.Text = "Edit";
+            colEdit.UseColumnTextForButtonValue = true;
             // 
             // colDelete
             // 
@@ -76,6 +78,8 @@
             colDelete.MinimumWidth = 6;
             colDelete.Name = "colDelete";
             colDelete.ReadOnly = true;
+            colDelete.Text = "Delete";
+            colDelete.UseColumnTextForButtonValue = true;
             // 
             // colTitle
             // 
