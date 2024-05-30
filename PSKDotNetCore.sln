@@ -29,7 +29,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.ConsoleAppRef
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.PizzaApi", "PSKDotNetCore.PizzaApi\PSKDotNetCore.PizzaApi.csproj", "{3CE799DE-39C1-479A-B85A-1AD2ED3CA46A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.WinFormsAppSqlInjection", "PSKDotNetCore.WinFormsAppSqlInjection\PSKDotNetCore.WinFormsAppSqlInjection.csproj", "{D9A21C1A-62C5-4CC8-8F7C-0B163DE009CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.WinFormsAppSqlInjection", "PSKDotNetCore.WinFormsAppSqlInjection\PSKDotNetCore.WinFormsAppSqlInjection.csproj", "{D9A21C1A-62C5-4CC8-8F7C-0B163DE009CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.NLayer.UI", "PSKDotNetCore.NLayer.UI\PSKDotNetCore.NLayer.UI.csproj", "{A195E147-014C-4193-89EB-3366136D135A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.NLayer.BusinessLogic", "PSKDotNetCore.NLayer.BusinessLogic\PSKDotNetCore.NLayer.BusinessLogic.csproj", "{7D01CA48-F50B-4E6A-B426-089ADE2A23D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.NLayer.DataAccess", "PSKDotNetCore.NLayer.DataAccess\PSKDotNetCore.NLayer.DataAccess.csproj", "{CF592F4D-48EB-4466-B174-EAD5063031C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +87,18 @@ Global
 		{D9A21C1A-62C5-4CC8-8F7C-0B163DE009CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9A21C1A-62C5-4CC8-8F7C-0B163DE009CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9A21C1A-62C5-4CC8-8F7C-0B163DE009CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A195E147-014C-4193-89EB-3366136D135A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A195E147-014C-4193-89EB-3366136D135A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A195E147-014C-4193-89EB-3366136D135A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A195E147-014C-4193-89EB-3366136D135A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D01CA48-F50B-4E6A-B426-089ADE2A23D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D01CA48-F50B-4E6A-B426-089ADE2A23D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D01CA48-F50B-4E6A-B426-089ADE2A23D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D01CA48-F50B-4E6A-B426-089ADE2A23D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF592F4D-48EB-4466-B174-EAD5063031C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF592F4D-48EB-4466-B174-EAD5063031C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF592F4D-48EB-4466-B174-EAD5063031C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF592F4D-48EB-4466-B174-EAD5063031C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
