@@ -1,36 +1,30 @@
 const tblBlog = "blogs";
 
-//createBlog();
+//createBlog("new title", "new author", "new content");
 readBlog();
-//editBlog("29ca2d98-c1ae-43f1-832b-6189b9970d0f");
-//updateBlog("04396ffb-a8c9-4cca-b556-891245197bc6", "update title", "update author", "update content");
-//deleteBlog("6a64e7de-6e8b-4bea-851d-54bc51c1ba02");
+//editBlog("f8043c69-1232-4bbd-a9cd-b0d93a1564d2");
+//updateBlog("f8043c69-1232-4bbd-a9cd-b0d93a1564d2", "update1 title", "update2 author", "update3 content");
+//deleteBlog("687ba841-3097-451e-87c4-f696d0f0cc5d");
 
 function readBlog() {
 
-    const blogs = localStorage.getItem(tblBlog);
-    if (blogs == null) {
+    let lst = getBlogs();
+    if (lst == 0) {
         console.log("No Data Found");
         return;
     }
-    console.log(blogs);
+    console.log(lst);
     // document.write(blogs);
 }
 
-function createBlog() {
-    const blogs = localStorage.getItem(tblBlog);
-    console.log(blogs);
-
-    let lst = [];
-    if (blogs !== null) {
-        lst = JSON.parse(blogs);
-    }
+function createBlog(title, author, content) {
+    let lst = getBlogs();
 
     const requestModel = {
         id: uuidv4(),
-        title: "test title",
-        author: "test author",
-        content: "test content"
+        title: title,
+        author: author,
+        content: content
     };
 
     lst.push(requestModel);
@@ -40,13 +34,8 @@ function createBlog() {
 }
 
 function editBlog(id) {
-    const blogs = localStorage.getItem(tblBlog);
-    console.log(blogs);
-
-    let lst = [];
-    if (blogs !== null) {
-        lst = JSON.parse(blogs);
-    }
+    const lst = getBlogs();
+    console.log(lst);
 
     const items = lst.find(x => x.id === id);
     console.log(items);
@@ -58,13 +47,7 @@ function editBlog(id) {
 }
 
 function updateBlog(id, title, author, content) {
-    const blogs = localStorage.getItem(tblBlog);
-    console.log(blogs);
-
-    let lst = [];
-    if (blogs !== null) {
-        lst = JSON.parse(blogs);
-    }
+    let lst = getBlogs();
 
     const items = lst.find(x => x.id === id);
     console.log(items);
@@ -83,13 +66,7 @@ function updateBlog(id, title, author, content) {
 }
 
 function deleteBlog(id) {
-    const blogs = localStorage.getItem(tblBlog);
-    console.log(blogs);
-
-    let lst = [];
-    if (blogs !== null) {
-        lst = JSON.parse(blogs);
-    }
+    let lst = getBlogs();
 
     const items = lst.filter(x => x.id === id);
     console.log(items);
@@ -110,4 +87,15 @@ function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
         (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
     );
+}
+
+function getBlogs() {
+    const blogs = localStorage.getItem(tblBlog);
+    console.log(blogs);
+
+    let lst = [];
+    if (blogs !== null) {
+        lst = JSON.parse(blogs);
+    }
+    return lst;
 }
