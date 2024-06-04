@@ -125,6 +125,7 @@ function getBlogs() {
 }
 
 $('#btnSave').click(function() {
+    Notiflix.Loading.pulse();
     const title = $('#txtTitle').val();
     const author = $('#txtAuthor').val();
     const content = $('#txtContent').val();
@@ -137,14 +138,27 @@ $('#btnSave').click(function() {
     }
 
     getBlogTable();
+    setTimeout(function() {
+        Notiflix.Loading.remove();
+    }, 2000);
 })
 
 function successMessage(msg) {
-    alert(msg);
+    // alert(msg);
+    Swal.fire({
+        title: "Good job!",
+        text: msg,
+        icon: "success"
+    });
 }
 
 function errorMessage(msg) {
-    alert(msg);
+    //alert(msg);
+    Swal.fire({
+        title: "Good job!",
+        text: msg,
+        icon: "error"
+    });
 }
 
 function clearControls() {
