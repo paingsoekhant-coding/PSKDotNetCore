@@ -10,7 +10,12 @@ namespace PSKDotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
-        private readonly AppDbContext _context = new AppDbContext();
+        private readonly AppDbContext _context;
+
+        public BlogController(AppDbContext context)
+        {
+            _context = context;
+        }
         //get method 
         [HttpGet]
         public IActionResult Read()

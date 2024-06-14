@@ -9,17 +9,25 @@ using System.Threading.Tasks;
 
 namespace PSKDotNetCore.ConsoleApp.AdoDotNetExamples
 {
-    internal class AdoDotNetExample
+    public class AdoDotNetExample
     {
         //SqlConnectionStringBuilder method and _ use for global variable
-        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
-        {
-            DataSource = "DESKTOP-5V2KGHB", //server name 
-            InitialCatalog = "DotNetTrainingBatch4", //database name
-            UserID = "sa",
-            Password = "sasa@1234"
+        // private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        // {
+        //     DataSource = "DESKTOP-5V2KGHB", //server name 
+        //    InitialCatalog = "DotNetTrainingBatch4", //database name
+        //     UserID = "sa",
+        //    Password = "sasa@1234"
 
-        };
+        //};
+
+        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder;
+
+        public AdoDotNetExample(SqlConnectionStringBuilder sqlConnectionStringBuilder)
+        {
+            _sqlConnectionStringBuilder = sqlConnectionStringBuilder;
+        }
+
 
         //read method 
         public void Read()
