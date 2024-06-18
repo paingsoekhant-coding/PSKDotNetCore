@@ -1,7 +1,7 @@
 ### DotNetTraining Batch 4 
 
-> :memo: **Note:** Course Outline.
+> :memo: **Course Outline** 
 
-<font color="red">This text is red!</font>
+<p style="color:blue">Make this text blue.</p>
 
 
