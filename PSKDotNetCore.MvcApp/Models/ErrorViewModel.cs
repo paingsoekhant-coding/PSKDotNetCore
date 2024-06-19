@@ -1,4 +1,4 @@
-namespace PSKDotNetCore.MvcApp.Models
+namespace PSKDotNetCore.MVCApp.Models
 {
     public class ErrorViewModel
     {
