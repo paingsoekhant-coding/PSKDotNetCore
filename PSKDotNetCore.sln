@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.MinimalApi", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.MVCApp", "PSKDotNetCore.MVCApp\PSKDotNetCore.MVCApp.csproj", "{B87D4E82-C0D0-4225-AC52-49D0EC1C54A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.MvcApp(New)", "PSKDotNetCore.MvcApp(New)\PSKDotNetCore.MvcApp(New).csproj", "{FBD3EEB7-D1CE-4627-A192-3141EB1833AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PSKDotNetCore.MvcApp(New)", "PSKDotNetCore.MvcApp(New)\PSKDotNetCore.MvcApp(New).csproj", "{FBD3EEB7-D1CE-4627-A192-3141EB1833AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSKDotNetCore.MvcApp(2)", "PSKDotNetCore.MvcApp(2)\PSKDotNetCore.MvcApp(2).csproj", "{7AC34435-9A13-4EC9-B14C-66CD9BFE7AD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{FBD3EEB7-D1CE-4627-A192-3141EB1833AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBD3EEB7-D1CE-4627-A192-3141EB1833AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBD3EEB7-D1CE-4627-A192-3141EB1833AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC34435-9A13-4EC9-B14C-66CD9BFE7AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC34435-9A13-4EC9-B14C-66CD9BFE7AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC34435-9A13-4EC9-B14C-66CD9BFE7AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC34435-9A13-4EC9-B14C-66CD9BFE7AD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
