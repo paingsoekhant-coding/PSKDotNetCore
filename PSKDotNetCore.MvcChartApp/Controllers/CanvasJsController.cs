@@ -2,19 +2,19 @@
 
 namespace PSKDotNetCore.MvcChartApp.Controllers
 {
-    public class HighChart : Controller
+    public class CanvasJsController : Controller
     {
-        public IActionResult PieChart()
+        public IActionResult DashedLineChart()
         {
             return View();
         }
 
-        public IActionResult AreaChart() 
+        public IActionResult LiveColumnChart()
         {
             return View();
         }
 
-        public IActionResult BarRaceChart()
+        public IActionResult BubbleChart()
         {
             return View();
         }
